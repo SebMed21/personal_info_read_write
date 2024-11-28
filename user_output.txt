@@ -1,1 +1,12 @@
-['seb']['med']['n']['3']
+Name: Sebastian Aquil Natvidad Medina
+Birthday : 10/03
+Age : 19 years old
+
+Name: Jared Dean Reyes Tiu
+Birthday : 08/17
+Age : 18 years old
+
+Name: Kenshin Amorado Ogmer
+Birthday : 05/10
+Age : 18 years old
+
