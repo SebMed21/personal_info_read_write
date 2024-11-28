@@ -10,7 +10,6 @@ retry_array = ["Y", "N"]
 
 while True: 
     while True:
-        try:
             #prompts the user for data
             user_input = str(input("Please enter your first name : "))
             first_name.append(user_input)
@@ -30,16 +29,13 @@ while True:
             #this asks the user if they want to repeat the loop
             retry_input = input("Would you like to try more? ( Y / N ) : ")
             
-        except:
-            break
-        
         
         #this is what progresses the loop
-        while not retry_input in retry_array:
-            retry_input = input("Would you like to try more? ( Y / N ) : ")
+            while not retry_input in retry_array:
+                retry_input = input("Would you like to try more? ( Y / N ) : ")
             
         #if the user answers "N" the loop will stop
-        if retry_input in retry_array[1]: 
+            if retry_input in retry_array[1]: 
                 break
             
     break
