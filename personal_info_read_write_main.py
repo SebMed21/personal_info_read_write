@@ -3,6 +3,8 @@ first_name = []
 last_name = []
 middle_name = []
 birthday = []
+age = []
+
 #i'm gonna use an array to store the correect answers to repeat the loop for convinience
 retry_array = ["Y", "N"]
 
@@ -19,8 +21,11 @@ while True:
             user_input = str(input("Please enter your middle name : "))
             middle_name.append(user_input)
                 
-            user_input = str(input("Please enter your birthday  : "))
-            birthday.append(user_input)       
+            user_input = str(input("Please enter your birthday (mm/dd) : "))
+            birthday.append(user_input)  
+            
+            user_input = str(input("Please enter your age : "))
+            age.append(user_input)       
             
             #this asks the user if they want to repeat the loop
             retry_input = input("Would you like to try more? ( Y / N ) : ")
@@ -41,7 +46,7 @@ while True:
 
 #this adds all the answers to the txt file
 with open("user_output.txt", "w") as output:
-    output.write(str(first_name))
-    output.write(str(last_name))
-    output.write(str(middle_name))
-    output.write(str(birthday))
+    for i in range(len(first_name)):
+        output.write(f"Name: {first_name[i]} {middle_name[i]} {last_name[i]}" )
+        output.write(f"\nBirthday : {birthday[i]}")
+        output.write(f"\nAge : {age[i]} years old\n\n")
